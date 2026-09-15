@@ -1,0 +1,177 @@
+:root {
+  --paper: #faf8f4;
+  --ink: #1a1814;
+  --muted: #5c564c;
+  --rule: #d9d0c3;
+  --accent: #7a2e2e;
+  --accent-soft: #f0e4e4;
+  --font-serif: "Literata", Georgia, serif;
+  --font-sans: "Work Sans", system-ui, sans-serif;
+  --wrap: min(980px, calc(100% - 2rem));
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.65;
+}
+
+a { color: var(--accent); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+.wrap { width: var(--wrap); margin-inline: auto; }
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  background: var(--ink);
+  color: #fff;
+  padding: 0.5rem;
+}
+.skip-link:focus { top: 1rem; }
+
+.masthead {
+  border-bottom: 1px solid var(--rule);
+  padding: 1rem 0;
+}
+
+.masthead-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.site-title { margin: 0; font-weight: 600; }
+.site-title a { color: var(--ink); text-decoration: none; }
+
+.text-link { color: var(--muted); text-decoration: none; font-size: 0.92rem; }
+.text-link:hover { color: var(--ink); }
+
+.intro { padding: 3rem 0 2rem; }
+
+h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  line-height: 1.15;
+  margin: 0 0 1rem;
+  max-width: 18ch;
+  font-weight: 700;
+}
+
+.intro-text { font-size: 1.08rem; max-width: 58ch; margin: 0 0 1rem; color: var(--muted); }
+.intro-meta { margin: 0; font-size: 0.92rem; color: var(--muted); }
+
+.sample {
+  display: grid;
+  gap: 1.5rem;
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 820px) {
+  .sample { grid-template-columns: 1.5fr 1fr; align-items: start; gap: 2.5rem; }
+}
+
+.sample-paper {
+  background: #fff;
+  border: 1px solid var(--rule);
+  padding: 1.75rem 1.5rem 2rem;
+  box-shadow: 0 12px 30px rgba(26, 24, 20, 0.04);
+}
+
+.sample-label {
+  margin: 0 0 1rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.sample-paper h2 {
+  font-family: var(--font-serif);
+  font-size: 1.65rem;
+  margin: 0 0 0.35rem;
+  line-height: 1.25;
+}
+
+.sample-date { margin: 0 0 1rem; font-size: 0.88rem; color: var(--muted); }
+
+.sample-body {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+}
+.sample-body p { margin: 0 0 1rem; }
+
+.sample-aside h3 { margin: 0 0 0.75rem; font-size: 1rem; }
+.sample-aside ul { margin: 0; padding-left: 1.1rem; color: var(--muted); }
+.sample-aside li { margin-bottom: 0.4rem; }
+.sample-aside code { font-size: 0.85em; background: var(--accent-soft); padding: 0.1rem 0.3rem; }
+
+.flow {
+  background: var(--ink);
+  color: #ece7df;
+  padding: 3rem 0;
+}
+
+.flow h2 {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  margin: 0 0 0.75rem;
+  color: #fff;
+}
+
+.flow p { color: #b8afa3; max-width: 48ch; margin: 0 0 1.5rem; }
+
+.flow-grid { display: grid; gap: 1.5rem; }
+
+.code {
+  margin: 0;
+  padding: 1rem 1.1rem;
+  background: #0f0e0c;
+  border: 1px solid #3a3530;
+  overflow-x: auto;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: #e8dfd3;
+}
+
+.cta { padding: 3.5rem 0 4rem; }
+.cta-inner { max-width: 52ch; }
+.cta h2 { font-family: var(--font-serif); font-size: 1.85rem; margin: 0 0 0.75rem; }
+.cta p { color: var(--muted); margin: 0 0 1.25rem; }
+
+.cta-row { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.15rem;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border: 2px solid var(--accent);
+}
+.btn:hover { background: #612424; border-color: #612424; color: #fff; }
+
+.btn-outline {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--rule);
+}
+.btn-outline:hover { background: #fff; color: var(--ink); }
+
+.footer {
+  border-top: 1px solid var(--rule);
+  padding: 1.5rem 0 2rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}

@@ -1,0 +1,194 @@
+:root {
+  --bg: #f4f6f3;
+  --card: #ffffff;
+  --ink: #1f2a24;
+  --muted: #5f6d64;
+  --line: #d8e0da;
+  --green: #2f6b4f;
+  --green-soft: #e3efe8;
+  --serif: "Newsreader", Georgia, serif;
+  --sans: "DM Sans", system-ui, sans-serif;
+  --wrap: min(980px, calc(100% - 2rem));
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.65;
+}
+
+a { color: var(--green); }
+a:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
+
+.wrap { width: var(--wrap); margin-inline: auto; }
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  background: var(--green);
+  color: #fff;
+  padding: 0.45rem 0.65rem;
+}
+.skip-link:focus { top: 0.75rem; }
+
+.top {
+  border-bottom: 1px solid var(--line);
+  background: rgba(244, 246, 243, 0.9);
+  backdrop-filter: blur(6px);
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.top-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 0;
+}
+
+.brand { font-weight: 600; letter-spacing: -0.01em; }
+
+.top nav { display: flex; gap: 1rem; font-size: 0.92rem; }
+.top nav a { color: var(--muted); text-decoration: none; }
+.top nav a:hover { color: var(--ink); }
+
+.opening {
+  display: grid;
+  gap: 2rem;
+  padding: 3rem 0 2.5rem;
+}
+
+@media (min-width: 860px) {
+  .opening { grid-template-columns: 1.2fr 0.8fr; align-items: start; }
+}
+
+h1 {
+  font-family: var(--serif);
+  font-size: clamp(2.1rem, 4.2vw, 3rem);
+  line-height: 1.12;
+  margin: 0 0 1rem;
+  font-weight: 700;
+  max-width: 16ch;
+}
+
+.opening-copy p { color: var(--muted); margin: 0 0 1.25rem; max-width: 52ch; }
+
+.btn {
+  display: inline-block;
+  padding: 0.72rem 1.15rem;
+  background: var(--green);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border: 2px solid var(--green);
+}
+.btn:hover { background: #24543e; border-color: #24543e; color: #fff; }
+
+.btn-dark { background: var(--ink); border-color: var(--ink); }
+.btn-dark:hover { background: #121814; border-color: #121814; }
+
+.facts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: var(--card);
+  border: 1px solid var(--line);
+}
+
+.facts li {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.92rem;
+}
+
+.facts li:last-child { border-bottom: none; }
+.facts span { color: var(--muted); }
+.facts strong { font-weight: 600; }
+
+.why {
+  background: var(--green-soft);
+  padding: 2.75rem 0;
+  border-block: 1px solid var(--line);
+}
+
+.why h2 {
+  font-family: var(--serif);
+  font-size: 1.75rem;
+  margin: 0 0 1rem;
+}
+
+.why-cols {
+  display: grid;
+  gap: 1rem;
+  color: var(--muted);
+}
+
+@media (min-width: 760px) {
+  .why-cols { grid-template-columns: 1fr 1fr; gap: 2rem; }
+}
+
+.why-cols p { margin: 0; }
+
+.setup { padding: 3rem 0 2rem; }
+.setup h2 { font-family: var(--serif); font-size: 1.75rem; margin: 0 0 1rem; }
+
+.setup-list { border-top: 1px solid var(--line); }
+
+details {
+  border-bottom: 1px solid var(--line);
+  padding: 0.85rem 0;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
+}
+summary::-webkit-details-marker { display: none; }
+
+details p {
+  margin: 0.65rem 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  max-width: 62ch;
+}
+
+details code {
+  font-size: 0.85em;
+  background: #eef2ef;
+  padding: 0.1rem 0.35rem;
+}
+
+.integration-note {
+  margin: 1.25rem 0 0;
+  font-size: 0.92rem;
+  color: var(--muted);
+  padding: 0.85rem 1rem;
+  background: var(--card);
+  border-left: 3px solid var(--green);
+}
+
+.closing { padding: 2.5rem 0 3.5rem; max-width: 52ch; }
+.closing h2 { font-family: var(--serif); font-size: 1.65rem; margin: 0 0 0.65rem; }
+.closing p { color: var(--muted); margin: 0 0 1rem; }
+
+.footer {
+  border-top: 1px solid var(--line);
+  padding: 1.25rem 0 2rem;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}

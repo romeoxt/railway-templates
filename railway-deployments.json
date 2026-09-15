@@ -1,0 +1,37 @@
+[
+  {
+    "template": "openai-chat-api",
+    "project": "OpenAI Chat API Template",
+    "projectId": "43d8de3d-27b0-4f47-9baa-d6cec00dd3d5",
+    "url": "https://openai-chat-api-production.up.railway.app",
+    "dashboard": "https://railway.com/project/43d8de3d-27b0-4f47-9baa-d6cec00dd3d5"
+  },
+  {
+    "template": "fastapi-postgres",
+    "project": "FastAPI Postgres API Template",
+    "projectId": "4a2c2b0d-92bf-48a0-9b71-60120c178edd",
+    "url": "https://fastapi-postgres-api-production.up.railway.app",
+    "dashboard": "https://railway.com/project/4a2c2b0d-92bf-48a0-9b71-60120c178edd"
+  },
+  {
+    "template": "hono-postgres",
+    "project": "Hono Postgres API Template",
+    "projectId": "1a94a448-6279-429f-a9d3-cc7259f4ce0b",
+    "url": "https://hono-postgres-api-production.up.railway.app",
+    "dashboard": "https://railway.com/project/1a94a448-6279-429f-a9d3-cc7259f4ce0b"
+  },
+  {
+    "template": "ai-agent-api",
+    "project": "AI Agent API Template",
+    "projectId": "f073be48-9bb3-422d-ab33-070d1c4dcae3",
+    "url": "https://ai-agent-api-production-3026.up.railway.app",
+    "dashboard": "https://railway.com/project/f073be48-9bb3-422d-ab33-070d1c4dcae3"
+  },
+  {
+    "template": "rag-pgvector",
+    "project": "RAG Pgvector API Template",
+    "projectId": "5f5b70ef-29b2-4dfd-8028-449c7e9d7640",
+    "url": "https://rag-pgvector-api-production.up.railway.app",
+    "dashboard": "https://railway.com/project/5f5b70ef-29b2-4dfd-8028-449c7e9d7640"
+  }
+]

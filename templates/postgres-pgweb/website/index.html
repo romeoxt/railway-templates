@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="PostgreSQL + PgWeb — a Railway template for a database with a browser UI. Browse tables and run SQL without local tools." />
+  <title>Postgres + PgWeb — your database, open in the browser</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="bar">
+    <div class="wrap bar-inner">
+      <span class="mark">PG</span>
+      <span class="bar-title">Postgres + PgWeb</span>
+      <a href="https://github.com/romeoxt/railway-template-postgres-pgweb" rel="noopener">GitHub</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap">
+      <div class="hero-text">
+        <h1>Spin up Postgres. Open it in a tab.</h1>
+        <p>This template pairs Railway PostgreSQL with PgWeb, a lightweight SQL client in the browser. Useful when you need a database for an MVP and do not want to configure pgAdmin on your laptop.</p>
+        <a class="btn" href="https://railway.com/new" rel="noopener">Deploy on Railway</a>
+      </div>
+      <div class="terminal" role="img" aria-label="Diagram: PostgreSQL service connected to PgWeb over private network, browser pointed at PgWeb public URL">
+        <div class="term-row"><span class="label">Postgres</span><span class="pipe">private network</span><span class="label accent">PgWeb</span><span class="pipe">HTTPS</span><span class="label">Browser</span></div>
+        <pre class="term-body"><code>SELECT id, email, created_at
+FROM users
+ORDER BY created_at DESC
+LIMIT 25;</code></pre>
+        <p class="term-caption">Run queries, inspect schemas, export results — from any machine.</p>
+      </div>
+    </section>
+
+    <section class="grid-section wrap">
+      <article>
+        <h2>Who this is for</h2>
+        <p>Hackathon teams, solo developers, and anyone prototyping an app that needs Postgres on day one. You get persistence, a volume-backed database, and a UI for debugging data without exposing Postgres to the public internet.</p>
+      </article>
+      <article>
+        <h2>How it fits together</h2>
+        <ol class="setup">
+          <li>Add PostgreSQL with a volume on Railway.</li>
+          <li>Deploy this repo as the PgWeb service.</li>
+          <li>Set <code>DATABASE_URL</code> to the Postgres reference variable.</li>
+          <li>Point your app at the same Postgres reference variable.</li>
+        </ol>
+      </article>
+    </section>
+
+    <section class="warn wrap">
+      <h2>Security note</h2>
+      <p>PgWeb is public in this template so you can reach it quickly. For anything beyond local experimentation, restrict access — Railway private networking, authentication proxy, or IP allowlisting — before storing real user data.</p>
+    </section>
+
+    <section class="bottom-cta wrap">
+      <h2>Request a quote on setup time: about ten minutes.</h2>
+      <p>Primary conversion: deploy the template and connect your app.</p>
+      <a class="btn btn-secondary" href="https://github.com/romeoxt/railway-template-postgres-pgweb" rel="noopener">Open template repository</a>
+    </section>
+  </main>
+
+  <footer class="footer wrap">
+    <p>Template by romeoxt · herbylegall9@gmail.com</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,47 @@
+[
+    {
+        "Template":  "fastapi-postgres",
+        "Repo":  "romeoxt/railway-template-fastapi-postgres",
+        "Url":  "https://github.com/romeoxt/railway-template-fastapi-postgres"
+    },
+    {
+        "Template":  "hono-postgres",
+        "Repo":  "romeoxt/railway-template-hono-postgres",
+        "Url":  "https://github.com/romeoxt/railway-template-hono-postgres"
+    },
+    {
+        "Template":  "openai-chat-api",
+        "Repo":  "romeoxt/railway-template-openai-chat-api",
+        "Url":  "https://github.com/romeoxt/railway-template-openai-chat-api"
+    },
+    {
+        "Template":  "ai-agent-api",
+        "Repo":  "romeoxt/railway-template-ai-agent-api",
+        "Url":  "https://github.com/romeoxt/railway-template-ai-agent-api"
+    },
+    {
+        "Template":  "rag-pgvector",
+        "Repo":  "romeoxt/railway-template-rag-pgvector",
+        "Url":  "https://github.com/romeoxt/railway-template-rag-pgvector"
+    },
+    {
+        "Template":  "simple-analytics",
+        "Repo":  "romeoxt/railway-template-simple-analytics",
+        "Url":  "https://github.com/romeoxt/railway-template-simple-analytics"
+    },
+    {
+        "Template":  "personal-blog",
+        "Repo":  "romeoxt/railway-template-personal-blog",
+        "Url":  "https://github.com/romeoxt/railway-template-personal-blog"
+    },
+    {
+        "Template":  "postgres-pgweb",
+        "Repo":  "romeoxt/railway-template-postgres-pgweb",
+        "Url":  "https://github.com/romeoxt/railway-template-postgres-pgweb"
+    },
+    {
+        "Template":  "umami-analytics",
+        "Repo":  "romeoxt/railway-template-umami-analytics",
+        "Url":  "https://github.com/romeoxt/railway-template-umami-analytics"
+    }
+]

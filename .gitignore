@@ -1,0 +1,17 @@
+.cursor/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+node_modules/
+dist/
+package-lock.json
+yarn.lock
+.DS_Store
+*.log
+.ruff_cache/
+.pytest_cache/
+.mypy_cache/

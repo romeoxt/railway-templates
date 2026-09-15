@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Deploy Umami analytics on Railway — privacy-friendly, self-hosted website statistics without Google Analytics." />
+  <title>Umami on Railway — analytics you host yourself</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="top">
+    <div class="wrap top-inner">
+      <strong class="brand">Umami · Railway</strong>
+      <nav aria-label="Page sections">
+        <a href="#why">Why self-host</a>
+        <a href="#setup">Setup</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="opening wrap">
+      <div class="opening-copy">
+        <h1>Website stats without handing every visit to an ad company.</h1>
+        <p>Umami is open-source analytics that respects privacy. This template shows the fastest Railway setup: PostgreSQL plus the official Umami Docker image. Reddit recommends this pattern for hobby sites, blogs, and MVPs that need real numbers.</p>
+        <a class="btn" href="https://github.com/romeoxt/railway-template-umami-analytics" rel="noopener">Follow the setup guide</a>
+      </div>
+      <ul class="facts" aria-label="What Umami tracks">
+        <li><span>Page views</span><strong>By path</strong></li>
+        <li><span>Referrers</span><strong>Where traffic came from</strong></li>
+        <li><span>Devices</span><strong>Screen size buckets</strong></li>
+        <li><span>Cookies</span><strong>Not required for basic tracking</strong></li>
+      </ul>
+    </section>
+
+    <section id="why" class="why">
+      <div class="wrap why-layout">
+        <h2>When this template makes sense</h2>
+        <div class="why-cols">
+          <p>You run a personal blog, a small SaaS landing page, or a community site and want a dashboard you control. You do not need ad attribution or session replay yet. You do want to know which pages people read and whether that newsletter link worked.</p>
+          <p>Railway keeps the infrastructure simple: one Postgres service, one Umami container, a public URL, done. The template repo documents variables and the first-login steps so you are not guessing.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="setup" class="setup wrap">
+      <h2>Setup overview</h2>
+      <div class="setup-list">
+        <details open>
+          <summary>1 · Add PostgreSQL with a volume</summary>
+          <p>Data must survive redeploys. Attach persistent storage to the database service.</p>
+        </details>
+        <details>
+          <summary>2 · Add Umami Docker image</summary>
+          <p>Image: <code>ghcr.io/umami-software/umami:postgresql-latest</code>. Connect <code>DATABASE_URL</code> and generate an <code>APP_SECRET</code>.</p>
+        </details>
+        <details>
+          <summary>3 · Log in and change defaults</summary>
+          <p>Default credentials are documented in the README. Change the admin password immediately after first login.</p>
+        </details>
+        <details>
+          <summary>4 · Add the tracking script to your site</summary>
+          <p>Umami generates a script tag per website you register in the dashboard.</p>
+        </details>
+      </div>
+      <p class="integration-note"><strong>Integration note:</strong> This repository is a deployment guide, not a fork of Umami. The running app comes from the official container image.</p>
+    </section>
+
+    <section class="closing wrap">
+      <h2>Deploy Umami on Railway</h2>
+      <p>Primary action: open the template repo and follow the composer checklist for marketplace publishing or a personal project.</p>
+      <a class="btn btn-dark" href="https://railway.com/new" rel="noopener">Start a Railway project</a>
+    </section>
+  </main>
+
+  <footer class="footer wrap">
+    <p>Guide maintained by <a href="mailto:herbylegall9@gmail.com">romeoxt</a>. Umami is a separate open-source project.</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
